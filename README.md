@@ -88,20 +88,21 @@ python manage.py migrate
 python manage.py runserver
 
 # 📌 Points d’accès API
-Méthode	URL	Description
-GET	/api/candidats/	Liste des candidats
-POST	/api/candidats/	Ajouter un nouveau candidat
-GET	/api/candidats/{id}	candidat by id
-PUT	/api/candidats/{id}	 modifier candidat by id
-DELETE	/api/candidats/{id}	 supprimer candidat by id
 
-GET	/api/recruteurs/	Liste des recruteurs
-GET	/api/recruteurs/voir-tous-les-candidats/	voir Liste des candidats
-GET	/api/recruteurs/ajouter-favori/	ajouter candidat au favori
-POST	/api/recruteurs/	Ajouter un nouveau recruteur
-GET	/api/recruteurs/{id}	recruteur by id
-PUT	/api/recruteurs/{id}	 modifier recruteur by id
-DELETE	/api/recruteurs/{id}	 supprimer recruteur by id
+| Méthode | URL                                         | Description                         |
+|---------|---------------------------------------------|-------------------------------------|
+| GET     |   /api/candidats/                           | Liste des candidats                 |
+| POST    |  /api/candidats/                            | Ajouter un nouveau candidat         |
+| GET     |  /api/candidats/{id}                        | Obtenir un candidat par ID          |
+| PUT     |  /api/candidats/{id}                        | Modifier un candidat par ID         |
+| DELETE  |  /api/candidats/{id}                        | Supprimer un candidat par ID        |
+| GET     |  /api/recruteurs/                           | Liste des recruteurs                |
+| GET     |  /api/recruteurs/voir-tous-les-candidats/   | Voir la liste des candidats         |
+| GET     |  /api/recruteurs/ajouter-favori/            | Ajouter un candidat aux favoris     |
+| POST    |  /api/recruteurs/                           | Ajouter un nouveau recruteur        |
+| GET     |  /api/recruteurs/{id}                       | Obtenir un recruteur par ID         |
+| PUT     |  /api/recruteurs/{id}                       | Modifier un recruteur par ID        |
+| DELETE  |  /api/recruteurs/{id}                       | Supprimer un recruteur par ID       |
 
 
 GET	/api/swagger/	Interface Swagger (API docs)
