@@ -9,15 +9,15 @@ Le projet est organisé en deux applications principales :
 
 - candidats: pour gérer les données des candidats (profil, CV, expériences, etc.)
 - recruteurs : pour gérer les recruteurs et leurs offres d'emploi.
-🛠 structure de Projet
+### 🛠 structure de Projet
 
-api-recrutement/
+RecrutementBackDjango/
 │
 |--- candidats/
 │   ├--- models.py
 │   ├--- views.py
 │   ├--- serializers.py
-│   └---urls.py
+│   └----urls.py
 │
 ├--- recruteurs/
 │   ├--- models.py
@@ -32,6 +32,7 @@ api-recrutement/
 │
 ├--- manage.py
 └---requirements.txt
+
 ## 🔧 Technologies utilisées
 
 - Python 3.13.3
@@ -45,13 +46,11 @@ api-recrutement/
 
 ### 1. Cloner le projet
 
-git clone https://github.com/salmaarb/Recrutement_Back_Django.git
-cd RecrutementBackDjango
+-- git clone https://github.com/salmaarb/Recrutement_Back_Django.git
+-- cd RecrutementBackDjango
 
 
-### 2. Créer un environnement virtuel
-python -m venv venv
-source   venv\Scripts\activate
+
 ### 3.Installer les dependances
 
 pip install -r requirements.txt
@@ -69,7 +68,7 @@ postgres est l'utilisateur par defaut
 ### -- 3. Donner tous les privilèges sur la base à cet utilisateur
 GRANT ALL PRIVILEGES ON DATABASE recrutement_db TO postgres;
 
-##ou bien tu peux configuré ces informations dans RecrutementBackDjango/settings.py selon tes donnees local :
+## ou bien tu peux configuré ces informations dans RecrutementBackDjango/settings.py selon tes donnees local :
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -95,8 +94,19 @@ python manage.py runserver
 Méthode	URL	Description
 GET	/api/candidats/	Liste des candidats
 POST	/api/candidats/	Ajouter un nouveau candidat
+GET	/api/candidats/{id}	candidat by id
+PUT	/api/candidats/{id}	 modifier candidat by id
+DELETE	/api/candidats/{id}	 supprimer candidat by id
+
 GET	/api/recruteurs/	Liste des recruteurs
+GET	/api/recruteurs/voir-tous-les-candidats/	voir Liste des candidats
+GET	/api/recruteurs/ajouter-favori/	ajouter candidat au favori
 POST	/api/recruteurs/	Ajouter un nouveau recruteur
+GET	/api/recruteurs/{id}	recruteur by id
+PUT	/api/recruteurs/{id}	 modifier recruteur by id
+DELETE	/api/recruteurs/{id}	 supprimer recruteur by id
+
+
 GET	/api/swagger/	Interface Swagger (API docs)
 GET	/api/redoc/	Interface ReDoc (API docs)
 
