@@ -46,10 +46,7 @@ RecrutementBackDjango/
 
 ### 1. Cloner le projet
 
--- git clone https://github.com/salmaarb/Recrutement_Back_Django.git
--- cd RecrutementBackDjango
-
-
+git clone https://github.com/salmaarb/Recrutement_Back_Django.git
 
 ### 3.Installer les dependances
 
@@ -68,13 +65,13 @@ postgres est l'utilisateur par defaut
 ### -- 3. Donner tous les privilèges sur la base à cet utilisateur
 GRANT ALL PRIVILEGES ON DATABASE recrutement_db TO postgres;
 
-## ou bien tu peux configuré ces informations dans RecrutementBackDjango/settings.py selon tes donnees local :
+## voici la configuration de la base de donnee dans le projet dans settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'recrutement_db',
-        'USER': 'votre_utilisateur',
-        'PASSWORD': 'votre_mot_de_passe',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432',
     }
