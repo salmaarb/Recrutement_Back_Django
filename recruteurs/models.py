@@ -1,6 +1,6 @@
 from django.db import models
 
-from candidats/models import Candidat
+from candidats.models import Candidat
 
 
 

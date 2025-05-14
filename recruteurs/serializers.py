@@ -1,12 +1,9 @@
 from rest_framework import serializers
 from .models import Recruteur
-from candidats/models import Candidat
+from candidats.models import Candidat
+from candidats.serializers import CandidatSerializer
 
 
-class CandidatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Candidat
-        fields = '__all__'
 
 class RecruteurSerializer(serializers.ModelSerializer):
     candidats_vus = CandidatSerializer(many=True, read_only=True)
