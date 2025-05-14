@@ -3,10 +3,10 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from .models import Recruteur
-from candidats/models import Candidat
+from candidats.models import Candidat
 
 from .serializers import  RecruteurSerializer
-from candidats/serializers import CandidatSerializer
+from candidats.serializers import CandidatSerializer
 
 
 
