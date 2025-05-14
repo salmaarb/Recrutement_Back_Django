@@ -9,7 +9,7 @@ Le projet est organisé en deux applications principales :
 
 - candidats: pour gérer les données des candidats (profil, CV, expériences, etc.)
 - recruteurs : pour gérer les recruteurs et leurs offres d'emploi.
-🛠 Exemple de structure des fichiers
+🛠 structure de Projet
 
 api-recrutement/
 │
@@ -45,30 +45,28 @@ api-recrutement/
 
 ### 1. Cloner le projet
 
-```bash
 git clone https://github.com/salmaarb/Recrutement_Back_Django.git
 cd RecrutementBackDjango
 
 
 ### 2. Créer un environnement virtuel
-```bash
 python -m venv venv
 source   venv\Scripts\activate
 ### 3.Installer les dependances
 
 pip install -r requirements.txt
 
-###🛠 Configuration de la base de données PostgreSQL
+###### 🛠 Configuration de la base de données PostgreSQL
 Avant de lancer les migrations, assure-toi que :
 PostgreSQL est installé sur ta machine.
 
--- 1. Créer la base de données
+### -- 1. Créer la base de données
 CREATE DATABASE recrutement_db;
 
--- 2. Créer un utilisateur avec mot de passe
+### -- 2. Créer un utilisateur avec mot de passe
 ALTER USER postgres WITH PASSWORD 'admin';
 postgres est l'utilisateur par defaut 
--- 3. Donner tous les privilèges sur la base à cet utilisateur
+### -- 3. Donner tous les privilèges sur la base à cet utilisateur
 GRANT ALL PRIVILEGES ON DATABASE recrutement_db TO postgres;
 
 ##ou bien tu peux configuré ces informations dans RecrutementBackDjango/settings.py selon tes donnees local :
@@ -93,7 +91,7 @@ python manage.py migrate
 
 python manage.py runserver
 
-📌 Points d’accès API
+# 📌 Points d’accès API
 Méthode	URL	Description
 GET	/api/candidats/	Liste des candidats
 POST	/api/candidats/	Ajouter un nouveau candidat
@@ -102,13 +100,13 @@ POST	/api/recruteurs/	Ajouter un nouveau recruteur
 GET	/api/swagger/	Interface Swagger (API docs)
 GET	/api/redoc/	Interface ReDoc (API docs)
 
-📚 Documentation Swagger
+# 📚 Documentation Swagger
 Accède à la documentation interactive via Swagger :
 
 ➡️ http://localhost:8000/api/swagger/
 ➡️ http://localhost:8000/api/redoc/ 
 Tu verras une interface lisible et interactive qui montre toute la structure d API (routes, champs, méthodes, descriptions…).
 
-👤 Auteur
+# 👤 Auteur
 Arbaoui Salma
 📧 Contact : [salma.arbaoui15@gmail.com]
